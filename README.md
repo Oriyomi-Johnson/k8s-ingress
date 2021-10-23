@@ -26,7 +26,7 @@ $ git clone https://github.com/MithunTechnologiesDevOps/kubernetes-ingress.git
 $ cd kubernetes-ingress/deployments
 ```
 ## 2. Create a Namespace And Service Account(security to manage nginx)
-
+creating namespace ann SA is in common file:
 ```
  $ kubectl apply -f common/ns-and-sa.yaml
 ```
