@@ -95,7 +95,7 @@ $ nslookup <dns-name>
 
 ### 5.1 Define path based or host based routing rules for your services.
 
-### Single DNS Sample with host and servcie place holders
+### Single DNS Sample with host and servcie place holders. we can also have multiple host(-host . service port)
 ``` yaml
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -104,12 +104,12 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: <DomainNameOne>
+  - host: <DomainNameOne><springapp.tekglobal.co>
     http:
       paths:
       # Default Backend (Root /)
       - backend:
-          serviceName: <serviceName>
+          serviceName: <serviceName><name of the app k8s service>
           servicePort: 80
 ``` 
 
